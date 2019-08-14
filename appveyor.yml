@@ -1,0 +1,15 @@
+image: Visual Studio 2017
+version: git-appveyor-{build}
+before_build:
+  - git clone --recursive https://github.com/thpatch/thtk.git C:\projects\thtk
+  - cd C:\projects\thtk
+  - cmake .
+configuration: Debug
+build:
+  project: C:\projects\thtk\thtk.sln
+  verbosity: minimal
+after_build:
+  - dir
+#artifacts:
+#  path: final.zip
+#  name: Everything here
