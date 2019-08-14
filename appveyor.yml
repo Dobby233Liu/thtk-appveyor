@@ -1,6 +1,7 @@
 image: Visual Studio 2017
 version: git-appveyor-{build}
 before_build:
+  - choco install winflexbison3
   - git clone --recursive https://github.com/thpatch/thtk.git C:\projects\thtk
   - cd C:\projects\thtk
   - cmake .
