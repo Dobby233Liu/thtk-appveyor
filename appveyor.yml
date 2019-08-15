@@ -12,7 +12,15 @@ build:
   verbosity: minimal
 after_build:
   - dir
-  - 7z a -tzip C:\projects\thtk.zip .\Debug\*
+  - mkdir C:\projects\thtk\mybin
+  - cd C:\projects\thtk\mybin
+  - copy C:\projects\thtk\thanm\Debug\*.* C:\projects\thtk\mybin
+  - copy C:\projects\thtk\thdat\Debug\*.* C:\projects\thtk\mybin
+  - copy C:\projects\thtk\thecl\Debug\*.* C:\projects\thtk\mybin
+  - copy C:\projects\thtk\thmsg\Debug\*.* C:\projects\thtk\mybin
+  - copy C:\projects\thtk\thstd\Debug\*.* C:\projects\thtk\mybin
+  - copy C:\projects\thtk\thtk\Debug\*.* C:\projects\thtk\mybin
+  - 7z a -tzip C:\projects\thtk-appveyor\thtk.zip C:\projects\thtk\mybin\*
 artifacts:
   path: C:\projects\thtk.zip
   name: Touhou Toolkit (git)
