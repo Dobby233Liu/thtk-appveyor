@@ -12,7 +12,7 @@ build:
   verbosity: minimal
 after_build:
   - dir
-  - 7z a -tzip thtk.zip .\Debug
+  - 7z a -tzip C:\projects\thtk.zip .\Debug\*
 artifacts:
-  path: thtk.zip
+  path: C:\projects\thtk.zip
   name: Touhou Toolkit (git)
