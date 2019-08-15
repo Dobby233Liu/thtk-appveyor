@@ -6,7 +6,7 @@ before_build:
   - cd C:\projects\thtk
   - cmake .
   - dir
-configuration: Debug
+configuration: Release
 build:
   project: C:\projects\thtk\Touhou Toolkit.sln
   verbosity: minimal
@@ -14,12 +14,12 @@ after_build:
   - dir
   - mkdir C:\projects\thtk\mybin
   - cd C:\projects\thtk\mybin
-  - copy C:\projects\thtk\thanm\Debug\*.* C:\projects\thtk\mybin
-  - copy C:\projects\thtk\thdat\Debug\*.* C:\projects\thtk\mybin
-  - copy C:\projects\thtk\thecl\Debug\*.* C:\projects\thtk\mybin
-  - copy C:\projects\thtk\thmsg\Debug\*.* C:\projects\thtk\mybin
-  - copy C:\projects\thtk\thstd\Debug\*.* C:\projects\thtk\mybin
-  - copy C:\projects\thtk\thtk\Debug\*.* C:\projects\thtk\mybin
+  - copy C:\projects\thtk\thanm\Release\*.* C:\projects\thtk\mybin
+  - copy C:\projects\thtk\thdat\Release\*.* C:\projects\thtk\mybin
+  - copy C:\projects\thtk\thecl\Release\*.* C:\projects\thtk\mybin
+  - copy C:\projects\thtk\thmsg\Release\*.* C:\projects\thtk\mybin
+  - copy C:\projects\thtk\thstd\Release\*.* C:\projects\thtk\mybin
+  - copy C:\projects\thtk\thtk\Release\*.* C:\projects\thtk\mybin
   - 7z a -tzip C:\projects\thtk-appveyor\thtk.zip C:\projects\thtk\mybin\*
 artifacts:
   path: thtk.zip
