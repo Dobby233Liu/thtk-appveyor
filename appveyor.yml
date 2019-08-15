@@ -12,6 +12,7 @@ build:
   verbosity: minimal
 after_build:
   - dir
-#artifacts:
-#  path: final.zip
-#  name: Everything here
+  - 7z a -tzip thtk.zip .\Debug
+artifacts:
+  path: thtk.zip
+  name: Touhou Toolkit (git)
