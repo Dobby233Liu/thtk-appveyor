@@ -8,7 +8,7 @@ before_build:
   - dir
 configuration: Debug
 build:
-  project: C:\projects\thtk\thtk.sln
+  project: C:\projects\thtk\Touhou Toolkit.sln
   verbosity: minimal
 after_build:
   - dir
