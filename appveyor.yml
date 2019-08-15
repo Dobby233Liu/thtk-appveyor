@@ -5,6 +5,7 @@ before_build:
   - git clone --recursive https://github.com/thpatch/thtk.git C:\projects\thtk
   - cd C:\projects\thtk
   - cmake .
+  - dir
 configuration: Debug
 build:
   project: C:\projects\thtk\thtk.sln
