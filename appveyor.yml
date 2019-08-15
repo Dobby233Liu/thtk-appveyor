@@ -22,5 +22,5 @@ after_build:
   - copy C:\projects\thtk\thtk\Debug\*.* C:\projects\thtk\mybin
   - 7z a -tzip C:\projects\thtk-appveyor\thtk.zip C:\projects\thtk\mybin\*
 artifacts:
-  path: C:\projects\thtk.zip
+  path: C:\projects\thtk-appveyor\thtk.zip
   name: Touhou Toolkit (git)
